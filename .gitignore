@@ -1,2 +1,5 @@
 # ignore the files in _site directory
 _site/
+
+# temp files
+*~

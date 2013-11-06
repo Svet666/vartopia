@@ -6,7 +6,7 @@ layout: default
 <ul>
 {% for news in site.categories.videos %}
 	<li>
-	<a href="{{news.url}}">{{news.title}}</a>
+	<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
 	<!-- <p>{{news.meta}}</p>  -->
 	</li>
 {% endfor %}
@@ -16,7 +16,7 @@ layout: default
 <ul>
 {% for news in site.categories.news %}
 	<li>
-	<a href="{{news.url}}">{{news.title}}</a>
+	<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
 	<!-- <p>{{news.meta}}</p>  -->
 	</li>
 {% endfor %}

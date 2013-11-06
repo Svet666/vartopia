@@ -1,3 +1,4 @@
 markdown: redcarpet
 baseurl: /vartopia
 exclude: ['README.md']
+permalink: pretty

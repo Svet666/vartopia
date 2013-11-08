@@ -1,0 +1,81 @@
+<div class="hidden">
+<!-- Here hides the pop-in lead form -->
+<div class="contact-container" id="inline_content" style="margin-top:50px;">
+<div class="gray1 row"><h2 style="padding:20px;">We just need some details in order to proceed</h2></div>
+<form action="http://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" id="commentForm">
+  
+  <input type="hidden" name="oid" value="00D30000000VWiv" /> 
+<input type="hidden" name="retURL" value="http://www.vartopia.com/contact/index.html" />
+
+<input id="company" type="text" name="company" size="20" maxlength="40" class="required" placeholder="Company*"/>
+
+<input id="first_name" type="text" name="first_name" size="20" maxlength="40" class="required" placeholder="First Name*" />
+
+<input id="last_name" type="text" name="last_name" size="20" maxlength="80" class="required" placeholder="Last Name*" />
+
+<input id="title" type="text" name="title" size="20" maxlength="40" class="required" placeholder="Title*" />
+
+<input id="phone" type="text" name="phone" size="20" maxlength="40" placeholder="Phone" />
+
+<input id="email" type="text" name="email" size="20" maxlength="80" class="required email" placeholder="Email*" />
+
+<select title="Company Type" name="00N30000004ZXqz" placeholder="Company Type*"><option value="VAR">Reseller</option><option value="Vendor">Manufacturer</option><option value="VAR" selected>- Select Company Type</option></select>
+<input type="hidden" id="lead_source" name="lead_source" value="Vartopia Website" />
+
+<textarea id="00N30000004ZUTB" name="00N30000004ZUTB" rows="1" placeholder="Comments"></textarea>
+<p>
+<!-- remove this before release<input type="hidden" name="debug" value="1"> -->
+<input type="submit" name="submit" value="Next >" /> </p>
+</form>
+<script type="text/javascript">function populateTTParams(){var str = ['company','first_name','last_name','title','phone','email','00N30000004ZXqz','00N30000004ZUTB'],sfCustomFields = {},urlp = [];for(var i=0,len=str.length;i<len;i++){var fName = str[i];if (sfCustomFields[fName]) fName = sfCustomFields[fName];urlp.push((i==0 ? "" : "&") + encodeURIComponent(str[i]) +"="+encodeURIComponent(document.forms[0][fName].value));};urlp = urlp.join("")+"&token=M4CTL";document.forms[0].retURL.value='http://www.vartopia.com/docs.html?'+urlp;};if (window.attachEvent) document.forms[0].attachEvent('onsubmit', populateTTParams);else document.forms[0].addEventListener('submit', populateTTParams, false);</script>
+</div> <!-- end the contact-container -->
+</div>
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{site.baseurl}}/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="{{site.baseurl}}/js/plugins.js"></script>
+        <script src="{{site.baseurl}}/js/main.js"></script>
+        <!-- Validation -->
+		<script type="text/javascript" src="{{site.baseurl}}/js/jquery.validate.js"></script>
+        
+            <script>
+              $(document).ready(function(){
+                $("#commentForm").validate();
+              });
+          </script>
+        <!-- Validation end -->
+		<script src="{{site.baseurl}}/js/jquery.colorbox.js"></script>
+		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".portal-screenshots").colorbox({rel:'portal-screenshots', transition:"none", width:"75%", height:"75%"});
+				$(".sfdc-screenshots").colorbox({rel:'sfdc-screenshots', transition:"none", width:"75%", height:"75%"});
+				$(".connector").colorbox({rel:'connector', width:"75%", height:"75%"});
+				$(".sfdc1").colorbox({rel:'sfdc1', width:"75%", height:"75%"});
+				$(".sfdc2").colorbox({rel:'sfdc2', width:"75%", height:"75%"});
+				
+				$(".solution1").colorbox({rel:'solution1', width:"75%", height:"75%"});
+				$(".solution2").colorbox({rel:'solution2', width:"75%", height:"75%"});
+				$(".inline").colorbox({inline:true, width:"75%"});
+
+			});
+		</script>
+       	
+<script src="{{site.baseurl}}/js/jquery.movingboxes.js"></script>
+        <script>
+		$(function(){
+	
+			$('#slider, #slider2, #slider3, #slider4').movingBoxes({
+				/* width and panelWidth options deprecated, but still work to keep the plugin backwards compatible
+				width: 500,
+				panelWidth: 0.5,
+				*/
+				startPanel   : 1,      // start with this panel
+				wrap         : true,  // if true, the panel will infinitely loop
+				buildNav     : true,   // if true, navigation links will be added
+				navFormatter : function(){ return "&#9679;"; } // function which returns the navigation text for each panel
+			});
+
+		});
+		</script>
+
+

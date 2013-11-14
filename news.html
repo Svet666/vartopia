@@ -1,27 +1,39 @@
 ---
-layout: default
+layout: blog
 ---
-<h1>Videos</h1>
 
-<ul>
+<div class="row">    <a id="top"><img src="img/arrow-hidden.png" width="30" height="27" /></a> </div>
+<div class="first row">
+<div class="container">
+<h1>Vartopia Blog</h1>
+</div> <!-- end container -->
+</div> <!-- end row -->
+
+{% for news in site.categories.news %}
+	<div class="divider row">
+	<div class="container">
+    <img src="{{site.baseurl}}/img/{{news.tile}}" />
+	<p>{{news.content}}</p>
+	<!--<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+	   -->
+	</div> <!-- end container -->
+	</div> <!-- end row -->
+{% endfor %}
+
 {% for news in site.categories.videos %}
-	<li>
-	<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
-	<!-- <p>{{news.meta}}</p>  -->
-	</li>
+	<div class="divider row">
+	<div class="container">
+		<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
+		<!-- <p>{{news.meta}}</p>  -->
+	</div> <!-- end container -->
+	</div> <!-- end row -->
 {% endfor %}
 </ul>
 <h1>News</h1>
 
-<ul>
-{% for news in site.categories.news %}
-	<li>
-	<p>{{news.content}}</p>
-	<!--<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
-	   -->
-	</li>
-{% endfor %}
-</ul>
+
+
+
 
 
 

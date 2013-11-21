@@ -2,7 +2,8 @@
 layout: blog
 ---
 
-<div class="row">    <a id="top"><img src="img/arrow-hidden.png" width="30" height="27" /></a> </div>
+<div class="row">
+<a id="top"><img src="img/arrow-hidden.png" width="30" height="27" /></a> </div>
 <div class="first row">
 <div class="container">
 <h1>Vartopia Blog</h1>
@@ -10,26 +11,34 @@ layout: blog
 </div> <!-- end row -->
 
 {% for news in site.categories.news %}
-	<div class="divider row">
-	<div class="container">
-    <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" />
-	<p>{{news.content}}</p>
-	<!--<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
-	   -->
-	</div> <!-- end container -->
-	</div> <!-- end row -->
+<div class="gray1 divider row">
+<div class="container">
+<div class="grid">
+<div class="four columns">
+   <h1>{{news.title}}</h1>
+</div>
+<div class="oneandahalf columns">
+   <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" />
+</div>
+</div> <!-- /grid -->
+</div> <!-- end container -->
+</div> <!-- end row -->
+<div class="row">
+<div class="container">
+<div class="grid">
+<div class="four columns">
+   <p>Author: {{news.author}}</p>
+</div>
+<div class="oneandahalf columns">
+   <p>{{news.content}}</p>
+</div>
+</div> <!-- /grid -->
+</div> <!-- end container -->
+</div> <!-- end row -->
 {% endfor %}
 
 {% for news in site.categories.videos %}
-	<div class="divider row">
-	<div class="container">
-		<a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
-		<!-- <p>{{news.meta}}</p>  -->
-	</div> <!-- end container -->
-	</div> <!-- end row -->
 {% endfor %}
-</ul>
-<h1>News</h1>
 
 
 

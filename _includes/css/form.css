@@ -1,0 +1,85 @@
+/* CONTACT */
+.contact-container {
+	width: 90%;
+	margin: auto;
+	padding: 0;
+}
+.contact-container ::-webkit-input-placeholder {
+    color: rgb(100,100,100);
+}
+.contact-container :-moz-placeholder {
+    color: rgb(100,100,100);
+}
+.contact-container ::-moz-placeholder {
+    color: rgb(100,100,100);
+}
+.contact-container :-ms-input-placeholder {
+    color: rgb(100,100,100);
+}
+.contact-container form {
+	width: 100%;
+	margin: 0;
+}
+.contact-container form input[type=text],.contact-container form input[type=email], .contact-container form select {
+	width: 40%;
+	color: rgb(50,50,50);
+	/*border: thin solid #CCC;*/
+	outline:none;
+	background: rgb(225,225,225);
+	display:inline-block;
+}
+.contact-container form select {color: rgb(150,150,150);}
+.contact-container form option {color: rgb(50,50,50);}
+.contact-container form input[type=text] .error,.contact-container form input[type=email] .error, .contact-container form .error {border:2px solid #C00; !important}
+
+.contact-container form textarea {
+	width: 60%;
+	color: rgb(50,50,50);
+	background: rgb(225,225,225);
+	resize: none;
+	height: 10em;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.contact-container form textarea, .contact-container form input, .contact-container form select {
+		border: 0 inset;
+		border-image-source: initial;
+		border-image-slice: initial;
+		border-image-width: initial;
+		border-image-outset: initial;
+		border-image-repeat: initial;	
+	}
+	.contact-container form textarea:focus {
+		outline:0;
+	}
+}
+.contact-container form textarea::-webkit-scrollbar {
+	width: 10px;
+}
+.contact-container form textarea::-webkit-scrollbar-track {
+	background: transparent;
+	margin:0.5em;
+}
+.contact-container form textarea::-webkit-scrollbar-thumb {
+	background: rgb(100,100,100);
+}
+.contact-container form input[type=text],.contact-container form input[type=email], .contact-container form textarea, .contact-container form select {
+	font-size: 1em;
+	padding: 0.5em;
+	margin:0.1em 0;
+	font-weight: 300;
+}
+.contact-container form input[type=text]:focus,.contact-container form input[type=email]:focus, .contact-container form textarea:focus, .contact-container form select:focus {
+	background: rgb(180,180,180);
+}
+.contact-container form input[type=submit] {
+padding:0.5em 1.5em;
+margin: 0.1em 0;
+border: 0;
+background: rgb(50,50,50);
+color: white;
+font-weight: 900;
+cursor: pointer;
+}
+.contact-container form input[type=submit]:hover {
+background: rgb(100,100,100);
+}

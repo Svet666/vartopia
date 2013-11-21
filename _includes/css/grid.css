@@ -1,0 +1,16 @@
+/* Grid */
+.grid .columns { display: inline-block;
+			     text-rendering: auto;
+ 			     vertical-align: top;}
+.grid .five {width:18%}
+.grid .four {width:24%}
+.grid .three {width:32%}
+.grid .threesm {width:28%}
+.grid .two {width:49%}
+.grid .twosm {width:45%}
+.grid .oneandahalf {width:71%}
+
+.grid .push-5 {margin-left:5%}
+.grid .push-7 {margin-left:8%}
+.grid .push-10 {margin-left:10%}
+

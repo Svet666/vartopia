@@ -1,3 +1,6 @@
+.row {width:100%;}
+.container{max-width:980px;margin:0 auto; position:relative;}
+
 /* Grid */
 .grid .columns { display: inline-block;
 			     text-rendering: auto;
@@ -8,7 +11,7 @@
 .grid .threesm {width:28%}
 .grid .two {width:49%}
 .grid .twosm {width:45%}
-.grid .oneandahalf {width:71%}
+.grid .oneandahalf {width:67%}
 
 .grid .push-5 {margin-left:5%}
 .grid .push-7 {margin-left:8%}

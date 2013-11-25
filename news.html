@@ -11,31 +11,24 @@ layout: blog
 </div> <!-- end row -->
 
 {% for news in site.categories.news %}
-<div class="gray1 divider row">
-<div class="container">
-<div class="grid">
-<div class="four columns">
-   <h1>{{news.title}}</h1>
-</div>
-<div class="oneandahalf columns">
-   <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" />
-</div>
-</div> <!-- /grid -->
-</div> <!-- end container -->
-</div> <!-- end row -->
+{% if forloop.first %}
 <div class="row">
 <div class="container">
 <div class="grid">
-<div class="four columns">
+<div class="gray3 left three columns">
+   <h3>{{news.title}}</h3>
    <p>Author: {{news.author}}</p>
    <p>Published on: {{news.date | date_to_string }}</p>
 </div>
 <div class="oneandahalf columns">
-   <p>{{news.content}}</p>
+   <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
 </div>
 </div> <!-- /grid -->
 </div> <!-- end container -->
 </div> <!-- end row -->
+{% else %}
+
+{% endif %}
 {% endfor %}
 
 {% for news in site.categories.videos %}

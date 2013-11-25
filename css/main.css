@@ -6,6 +6,7 @@
 {% include css/grid.css %}
 {% include css/colors.css %}
 {% include css/trunk.css %}
+{% include css/buttons.css %}
 {% include css/form.css %}
 {% include css/media.css %}
 

@@ -1,8 +1,7 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-.row {width:100%;}
-.container{max-width:980px;padding:0 10px;margin:0 auto; position:relative;}
+
 .site-header{min-height:45px;padding-top:3px; background:#222;}
 .site-logo{float:left; text-decoration:none;}
 .site-nav{float:right;
@@ -32,6 +31,7 @@
 .xl img {width:100px; height:auto;}
 .left {text-align:left;}
 .center {text-align:center;}
+.right {text-align:right;}
 .banner {padding:1em 9em; 
 		 background:url(../img/banner.png) no-repeat center top;
 		 }
@@ -75,46 +75,7 @@
 	position: absolute;
 	cursor: pointer;
 }
-/* green button, long green button */
-.green-button {	padding:8px 24px; margin-top:24px; }
-.long-green-button { padding:1em 4em; margin:15px auto; }
-.green-button, .long-green-button {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #828082), color-stop(1, #0f0d0f) );
-	background:-moz-linear-gradient( center top, #828082 5%, #0f0d0f 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#828082', endColorstr='#0f0d0f');
-	background-color:#828082;
-	-webkit-border-top-left-radius:6px;
-	-moz-border-radius-topleft:6px;
-	border-top-left-radius:6px;
-	-webkit-border-top-right-radius:6px;
-	-moz-border-radius-topright:6px;
-	border-top-right-radius:6px;
-	-webkit-border-bottom-right-radius:6px;
-	-moz-border-radius-bottomright:6px;
-	border-bottom-right-radius:6px;
-	-webkit-border-bottom-left-radius:6px;
-	-moz-border-radius-bottomleft:6px;
-	border-bottom-left-radius:6px;
-	text-indent:0;
-	border:1px solid #8c8c8c;
-	display:inline-block;
-	color:#ffffff;
-	line-height:0.8em;
-	font-weight:bold;
-	font-style:normal;
-	text-align:center;
-}
-.green-button:hover, .long-green-button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #0f0d0f), color-stop(1, #828082) );
-	background:-moz-linear-gradient( center top, #0f0d0f 5%, #828082 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f0d0f', endColorstr='#828082');
-	background-color:#0f0d0f;
-	color:#FFFFFF;
-}.green-button:hlite, .long-green-button:hlite {
-	position:relative;
-	top:1px;
-}
-.green-button h3 {margin:0; padding:0;}
+
 /* Foot slider stuff */
 #bottom-container{ width: 100%; max-width:910px; height:90px; margin:0 auto; position:relative; overflow:hidden; background-color:#FFF; }
 .logos { width: 100%; max-width:850px; height:auto; text-align:center; overflow:hidden;}

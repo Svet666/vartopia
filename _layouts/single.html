@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>Vartopia</title>
+        <link rel="stylesheet" href="{{site.baseurl}}/css/normalize.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/colorbox.css">
+	<link rel="stylesheet" href="{{site.baseurl}}/css/movingboxes.css">
+</head>
+<body>
+<header class="site-header cf">
+<div class="darkbg row">
+<div class="container">
+
+        <div class="site-logo">
+          <a href="{{site.baseurl}}">
+          <img alt="logo" src="http://vendortopia.com/wordpress/wp-content/uploads/2013/05/logo2.png">
+          </a></div>
+{% include nav.html navclass='site-nav' %}
+    
+</div> <!-- end container -->
+</div> <!-- end row -->
+</header><!-- end site-header -->
+
+<div class="row">
+<a id="top"><img src="img/arrow-hidden.png" width="30" height="27" /></a> </div>
+<div class="first row">
+<div class="container">
+<h1>Vartopia Blog</h1>
+</div> <!-- end container -->
+</div> <!-- end row -->
+
+<div class="row">
+<div class="container right">
+<div class="grid darkbg">
+<div class="three columns bloghead">
+   <h3 class="padded">{{page.title}}</h3>
+</div>
+<div class="oneandahalf columns">
+   <img src="{{site.baseurl}}/img/blog-tiles/{{page.tile}}" />
+</div>
+</div> <!-- /grid -->
+</div> <!-- end container -->
+</div> <!-- end row -->
+
+<div class="row">
+<div class="container">
+<div class="grid">
+<div class="gray2 three columns">
+</div>
+<div class="oneandahalf columns">
+{{content}}
+</div>
+</div> <!-- /grid -->
+</div> <!-- end container -->
+</div> <!-- end row -->
+</body>
+</html>

@@ -66,9 +66,15 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-like" data-href="http://vartopia.com{page.url}" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+<br />
+<!-- linkedin -->
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+ lang: en_US
+</script>
+<script type="IN/Share"></script>
 
 <hr width="80%">
-{{page.date | date: "%d %B %Y" }}
+{{page.date | date: "%B %d, %Y" }}
 <hr width="80%">
 Author: {{page.author}}
 </div>
@@ -85,7 +91,7 @@ Author: {{page.author}}
    <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
    <h4>{{news.title}}</h4>
    <p>Author: {{news.author}}</p>
-   <p>Published on: {{news.date | date_to_string }}</p>
+   <p>Published on: {{news.date | date: "%B %d, %Y" }}</p>
 </div>
 {% endif %}
 {% endfor %}

@@ -23,16 +23,17 @@ layout: blog
    <p>Published on: {{news.date | date_to_string }}</p>
 </div>
 <div class="oneandahalf columns">
+   <div class="latest"><h4>Latest</h4></div>
    <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
 </div>
 <br /> <br />
-
+<hr />
 {% else %}
 <div class="margin-right left three columns">
    <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
    <h4>{{news.title}}</h4>
    <p>Author: {{news.author}}</p>
-   <p>Published on: {{news.date | date_to_string }}</p>
+   <p>Published on: {{news.date | date: "%B %d, %Y" }}</p>
 </div>
 {% endif %}
 {% endfor %}

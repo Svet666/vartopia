@@ -18,3 +18,6 @@
 .grid .push-7 {margin-left:8%}
 .grid .push-10 {margin-left:10%}
 
+/* Elements */
+.inline {display:inline-block;}
+

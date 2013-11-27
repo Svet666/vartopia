@@ -8,5 +8,6 @@
 {% include css/trunk.css %}
 {% include css/buttons.css %}
 {% include css/form.css %}
+{% include css/social.css %}
 {% include css/media.css %}
 

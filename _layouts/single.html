@@ -47,9 +47,32 @@
 <div class="row">
 <div class="container">
 <div class="grid">
-<div class="gray2 three columns">
+<div class="left three columns">
+<br />
+
+<!-- twitter -->
+<div class="inline">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tinyurl.com/{{page.tinyurl}}" data-text="{{page.title}}" data-via="Vartopia">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
-<div class="oneandahalf columns">
+
+<!-- fb -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="http://vartopia.com{page.url}" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+
+<hr width="80%">
+{{page.date | date: "%d %B %Y" }}
+<hr width="80%">
+Author: {{page.author}}
+</div>
+<div class="left oneandahalf columns">
 {{content}}
 </div>
 <hr /><h4>Read more</h4> <br />
@@ -79,11 +102,11 @@
       <div id="arr-prev"> </div> <div id="arr-next"> </div>
       
       <div id="logos-go" class="logos">
-        <div><img src="{{site.baseurl}}img/grayscale-logos1.png"  /></div> 
-        <div><img src="{{site.baseurl}}img/grayscale-logos2.png"  /> </div>
-        <div><img src="{{site.baseurl}}img/grayscale-logos3.png"  /> </div>
-        <div><img src="{{site.baseurl}}img/grayscale-logos4.png"  /> </div>
-        <div><img src="{{site.baseurl}}img/grayscale-logos5.png"  /> </div>
+        <div><img src="{{site.baseurl}}/img/grayscale-logos1.png"  /></div> 
+        <div><img src="{{site.baseurl}}/img/grayscale-logos2.png"  /> </div>
+        <div><img src="{{site.baseurl}}/img/grayscale-logos3.png"  /> </div>
+        <div><img src="{{site.baseurl}}/img/grayscale-logos4.png"  /> </div>
+        <div><img src="{{site.baseurl}}/img/grayscale-logos5.png"  /> </div>
         </div><!-- /logos-go --> </div><!-- #bottom-container -->
 </div> <!-- end container -->
 </div> <!-- end row -->

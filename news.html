@@ -10,11 +10,13 @@ layout: blog
 </div> <!-- end container -->
 </div> <!-- end row -->
 
-{% for news in site.categories.news %}
-{% if forloop.first %}
 <div class="row">
 <div class="container">
 <div class="grid">
+{% for news in site.categories.news %}
+{% if forloop.first %}
+
+
 <div class="gray3 left three columns">
    <h3>{{news.title}}</h3>
    <p>Author: {{news.author}}</p>
@@ -23,13 +25,20 @@ layout: blog
 <div class="oneandahalf columns">
    <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
 </div>
+<br /> <br />
+
+{% else %}
+<div class="margin-right left three columns">
+   <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
+   <h4>{{news.title}}</h4>
+   <p>Author: {{news.author}}</p>
+   <p>Published on: {{news.date | date_to_string }}</p>
+</div>
+{% endif %}
+{% endfor %}
 </div> <!-- /grid -->
 </div> <!-- end container -->
 </div> <!-- end row -->
-{% else %}
-
-{% endif %}
-{% endfor %}
 
 {% for news in site.categories.videos %}
 {% endfor %}

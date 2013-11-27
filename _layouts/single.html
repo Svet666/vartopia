@@ -52,8 +52,81 @@
 <div class="oneandahalf columns">
 {{content}}
 </div>
+<hr /><h4>Read more</h4> <br />
+<!-- List of other articles -->
+{% for news in site.categories.news %}
+{% if news.title contains page.title %}
+
+{% else %}
+<div class="margin-right left three columns">
+   <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
+   <h4>{{news.title}}</h4>
+   <p>Author: {{news.author}}</p>
+   <p>Published on: {{news.date | date_to_string }}</p>
+</div>
+{% endif %}
+{% endfor %}
 </div> <!-- /grid -->
 </div> <!-- end container -->
 </div> <!-- end row -->
+
+
+
+<div class="divider row">
+<div class="container">
+    <!-- List of clients -->
+    <div id="bottom-container">
+      <div id="arr-prev"> </div> <div id="arr-next"> </div>
+      
+      <div id="logos-go" class="logos">
+        <div><img src="{{site.baseurl}}img/grayscale-logos1.png"  /></div> 
+        <div><img src="{{site.baseurl}}img/grayscale-logos2.png"  /> </div>
+        <div><img src="{{site.baseurl}}img/grayscale-logos3.png"  /> </div>
+        <div><img src="{{site.baseurl}}img/grayscale-logos4.png"  /> </div>
+        <div><img src="{{site.baseurl}}img/grayscale-logos5.png"  /> </div>
+        </div><!-- /logos-go --> </div><!-- #bottom-container -->
+</div> <!-- end container -->
+</div> <!-- end row -->
+</div> <!-- end wrap -->
+<footer class="darkbg row">
+<div class="container">
+<div id="afterfooter">
+<div id="afterfooterwrap">
+    <ul class="follow">
+        <li><b>Follow Us</b></li>
+        <li><a class="tw" href="http://twitter.com/#!/vartopia">Tw</a></li>
+        <li><a class="in" href="http://www.linkedin.com/company/vartopia">In</a></li>
+    </ul><!-- follow -->
+	
+</div> <!-- end afterfooterwrap -->
+</div> <!-- end afterfooter -->
+</div> <!-- end row -->  	
+</footer> <!-- end footer -->        
+	<script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{site.baseurl}}js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/cycle.js"></script>
+	<script type='text/javascript'>
+		$(document).ready(function() {
+			$('#logos-go').cycle({
+				fx: 'scrollLeft',
+				speed: 5000,
+				next: '#arr-next',
+				prev: '#arr-prev'
+			});
+		});
+        </script>
+	<script src="js/pullup.js"></script>
+        <script>
+		$(document).ready(function(){
+	        $(".scroll").pullupScroll('.container');
+		});
+	</script>
+
+
+
+
 </body>
 </html>
+

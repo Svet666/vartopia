@@ -10,24 +10,29 @@ layout: blog
 </div> <!-- end container -->
 </div> <!-- end row -->
 
-<div class="row">
-<div class="container">
-<div class="grid">
 {% for news in site.categories.news %}
 {% if forloop.first %}
-
-
-<div class="gray3 left three columns">
-   <h3>{{news.title}}</h3>
-   <p>Author: {{news.author}}</p>
-   <p>Published on: {{news.date | date_to_string }}</p>
+<div class="row">
+<div class="container right">
+<div class="grid darkbg">
+<div class="three columns bloghead">
+   <h3 class="padded">{{news.title}}</h3>
+   <p class="padded">Author: {{news.author}}</p>
+   <p class="padded">Published on: {{news.date | date_to_string }}</p>
 </div>
 <div class="oneandahalf columns">
    <div class="latest"><h4>Latest</h4></div>
    <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
 </div>
-<br /> <br />
-<hr />
+
+</div> <!-- /grid -->
+<br />
+</div> <!-- end container -->
+</div> <!-- end row -->
+<div class="divider row">
+<div class="container right">
+<br />
+<div class="grid">
 {% else %}
 <div class="margin-right left three columns">
    <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
@@ -35,6 +40,7 @@ layout: blog
    <p>Author: {{news.author}}</p>
    <p>Published on: {{news.date | date: "%B %d, %Y" }}</p>
 </div>
+
 {% endif %}
 {% endfor %}
 </div> <!-- /grid -->

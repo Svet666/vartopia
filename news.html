@@ -18,7 +18,7 @@ layout: blog
 <div class="three columns bloghead">
    <h3 class="padded">{{news.title}}</h3>
    <p class="padded">Author: {{news.author}}</p>
-   <p class="padded">Published on: {{news.date | date_to_string }}</p>
+   <p class="padded">Published on: {{news.date | date: "%B %d, %Y" }}</p>
 </div>
 <div class="oneandahalf columns">
    <div class="latest"><h4>Latest</h4></div>

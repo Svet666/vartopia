@@ -1,0 +1,73 @@
+---
+layout: r_base
+title: The Vartopia Network
+children: about
+---
+
+<div class="first row">
+  <div class="container">
+    <h1 class="xl"> {{page.title}} </h1>
+    <h2>An open platform, an open invitation</h2>
+
+    <p>Vendors and channel partners have joined the Vartopia Network to increase the impact of deal registration on their respective business. All are welcome to join.</p>  
+    <div class="grid">
+	{% for article in site.categories.about %}
+         {% if forloop.first or paginator.total_pages >= 4 %}
+	  <div class="bouncy four columns category">
+	    
+	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
+	    <br>{{ article.title }}<br>
+	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
+
+	  </div>
+	 {% else %}
+	  <div class="bouncy four columns category push-7">
+	    
+	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
+	    <br>{{ article.title }}<br>
+	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
+
+	  </div>
+	 {% endif %}
+	{% endfor %}
+    </div> <!-- end grid -->
+  </div> <!-- end container -->
+</div> <!-- end first row -->
+
+{% for article in site.categories.about %}
+{% if forloop.first %}
+<a id="{{ article.short }}"><img src="{{site.baseurl}}/img/arrow-hidden.png" width="30" height="27" /></a>
+
+<div class="divider row">
+<div class="container">
+
+	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
+	{{ article.content }}
+
+{% else %}
+
+	<!-- next sec. links -->
+	<a href="#{{ article.short }}" class="bouncy next-section" >
+	  <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" width="20" class="bouncy-arrow" /></span> 
+	  <span class="next-text"> {{ article.title }} </span>
+	</a>
+
+	<a href="#top" class="scroll go-up" id="{{ article.short }}"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>
+
+</div> <!-- end container -->
+</div> <!-- end row -->
+<div class="divider row">
+<div class="container">
+
+	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
+	{{ article.content }}
+
+  {% if forloop.last %}
+	<a href="#top" class="scroll go-up"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>
+
+</div> <!-- end container -->
+</div> <!-- end row -->
+  {% endif %}
+
+{% endif %}
+{% endfor %}

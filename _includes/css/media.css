@@ -121,8 +121,8 @@
 	html{ font-size:14px}
 	}
 @media only screen and (max-width: 460px){
-	.grid .five, .grid .four, .grid .three, .grid .threesm, .grid .two, .grid .twosm { width:100%; text-align:center;}
-	.grid .push-5, .grid .push-7, .grid .push-10 {margin:0;}
+	.grid .five, .grid .four, .grid .three, .grid .threesm, .grid .two, .grid .twosm, .grid .oneandahalf { width:100%; text-align:center;}
+	.grid .push-2, .grid .push-5, .grid .push-7, .grid .push-10 {margin:0;}
 	ul {text-align:left;}
 	.site-nav li{margin:0}
 	.mb-scrollButtons, #bottom-container{display:none;}

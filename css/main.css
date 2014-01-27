@@ -10,5 +10,6 @@
 {% include css/form.css %}
 {% include css/social.css %}
 {% include css/tables.css %}
+{% include css/map.css %}
 {% include css/media.css %}
 

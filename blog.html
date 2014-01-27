@@ -1,0 +1,56 @@
+---
+layout: blog
+---
+
+<div class="first row">
+<div class="container">
+<h1>Vartopia Blog</h1>
+</div> <!-- end container -->
+</div> <!-- end row -->
+
+{% for news in site.categories.blog %}
+{% if forloop.first %}
+<div class="row">
+<div class="container right">
+<div class="grid darkbg">
+<div class="three columns bloghead">
+   <h3 class="padded">{{news.title}}</h3>
+   <p class="padded">Author: {{news.author}}</p>
+   <p class="padded">Published on: {{news.date | date: "%B %d, %Y" }}</p>
+</div>
+<div class="oneandahalf columns">
+   <div class="latest"><h4>Latest</h4></div>
+   <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
+</div>
+
+</div> <!-- /grid -->
+<br />
+</div> <!-- end container -->
+</div> <!-- end row -->
+<div class="row">
+<div class="divider container">
+<br />
+<div class="grid left">
+{% else %}
+<div class="margin-right left three columns">
+   <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
+   <h4>{{news.title}}</h4>
+   <p>Author: {{news.author}}</p>
+   <p>Published on: {{news.date | date: "%B %d, %Y" }}</p>
+</div>
+
+{% endif %}
+{% endfor %}
+</div> <!-- /grid -->
+</div> <!-- end container -->
+</div> <!-- end row -->
+
+{% for news in site.categories.videos %}
+{% endfor %}
+
+
+
+
+
+
+

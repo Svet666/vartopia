@@ -1,54 +1,77 @@
 ---
 layout: blog
+title: Vartopia News
 ---
 
-<div class="row">
-<a id="top"><img src="img/arrow-hidden.png" width="30" height="27" /></a> </div>
 <div class="first row">
 <div class="container">
-<h1>Vartopia Blog</h1>
+<h1>Vartopia News</h1>
 </div> <!-- end container -->
 </div> <!-- end row -->
 
-{% for news in site.categories.news %}
-{% if forloop.first %}
+<!-- latest -->
 <div class="row">
 <div class="container right">
 <div class="grid darkbg">
-<div class="three columns bloghead">
-   <h3 class="padded">{{news.title}}</h3>
-   <p class="padded">Author: {{news.author}}</p>
-   <p class="padded">Published on: {{news.date | date: "%B %d, %Y" }}</p>
+<div class="oneandahalf columns bloghead">
+   <h3 class="padded"><a href="http://www.channelpartnersonline.com/news/2013/12/vartopia-tackles-deal-reg-challenges-with-platfor.aspx" target="_new">Vartopia Tackles Deal-Reg Challenges With Platform Upgrade</a></h3>
+   <p class="padded">Published on:  December 12th, 2013 </p>
 </div>
-<div class="oneandahalf columns">
-   <div class="latest"><h4>Latest</h4></div>
-   <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
+<div class="three columns">
+<!--   <div class="latest"><h4>Latest</h4></div>  -->
+   <a href="http://www.channelpartnersonline.com/news/2013/12/vartopia-tackles-deal-reg-challenges-with-platfor.aspx" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/ChannelPartners.png" style="margin-top:15px;" /> </a>
 </div>
 
 </div> <!-- /grid -->
 <br />
 </div> <!-- end container -->
-</div> <!-- end row -->
+</div> <!-- end row --> 
+<!-- /latest -->
+
 <div class="row">
 <div class="divider container">
 <br />
 <div class="grid left">
-{% else %}
+
 <div class="margin-right left three columns">
-   <a href="{{site.baseurl}}{{news.url}}"> <img src="{{site.baseurl}}/img/blog-tiles/{{news.tile}}" /> </a>
-   <h4>{{news.title}}</h4>
-   <p>Author: {{news.author}}</p>
-   <p>Published on: {{news.date | date: "%B %d, %Y" }}</p>
+   <a href="http://www.channelprosmb.com/article/vartopia_upgrades_its_deal_registration_network" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/channelprosmb.png" /> </a>
+   <h4><a href="http://www.channelprosmb.com/article/vartopia_upgrades_its_deal_registration_network" target="_blank">Vartopia Upgrades Its Deal Registration Network</a></h4>
+   <p>Published on: December 26, 2013</p>
 </div>
 
-{% endif %}
-{% endfor %}
+<div class="margin-right left three columns">
+   <a href="http://thevarguy.com/channel-roundup/channel-partner-program-roundup-year-end-edition-part-one" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/varguy.png" /> </a>
+   <h4><a href="http://thevarguy.com/channel-roundup/channel-partner-program-roundup-year-end-edition-part-one" target="_blank">Channel Partner Program Roundup: Year-End Edition, Part One</a></h4>
+   <p>Published on: December 26, 2013</p>
+</div>
+
+<div class="margin-right left three columns">
+   <a href="http://channelvisionmag.com/vartopia-enhance-deal-registration-platform/" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/channel-vision.png" /> </a>
+   <h4><a href="http://channelvisionmag.com/vartopia-enhance-deal-registration-platform/" target="_blank">Vartopia Enhances Deal Registration Platform</a></h4>
+   <p>Published on: December 13, 2013</p>
+</div>
+
+
+<div class="margin-right left three columns">
+   <a href="http://www.crn.com/news/channel-programs/240164714/vartopia-update-helps-resellers-register-vendor-deals-without-the-headache.htm" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/CRN.gif" /> </a>
+   <h4><a href="http://www.crn.com/news/channel-programs/240164714/vartopia-update-helps-resellers-register-vendor-deals-without-the-headache.htm" target="_blank">Vartopia Update Helps Resellers Register Vendor Deals Without The Headache</a></h4>
+   <p>Published on: December 12, 2013</p>
+</div>
+
+
+<div class="margin-right left three columns">
+   <a href="http://searchitchannel.techtarget.com/news/2240211079/Vartopia-aims-to-simplify-deal-registration-process-for-VARs" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/SearchITChannel.png" /> </a>
+   <h4><a href="http://searchitchannel.techtarget.com/news/2240211079/Vartopia-aims-to-simplify-deal-registration-process-for-VARs" target="_blank">Vartopia aims to simplify deal registration process for VARs</a></h4>
+   <p>Published on: December 12, 2013</p>
+</div>
+
+
 </div> <!-- /grid -->
 </div> <!-- end container -->
 </div> <!-- end row -->
 
-{% for news in site.categories.videos %}
-{% endfor %}
+
+
 
 
 

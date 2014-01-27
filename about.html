@@ -12,7 +12,7 @@ children: about
     <p>Vendors and channel partners have joined the Vartopia Network to increase the impact of deal registration on their respective business. All are welcome to join.</p>  
     <div class="grid">
 	{% for article in site.categories.about %}
-         {% if forloop.first or paginator.total_pages >= 4 %}
+         
 	  <div class="bouncy four columns category">
 	    
 	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
@@ -20,15 +20,7 @@ children: about
 	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
 
 	  </div>
-	 {% else %}
-	  <div class="bouncy four columns category push-7">
-	    
-	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
-	    <br>{{ article.title }}<br>
-	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
-
-	  </div>
-	 {% endif %}
+	 
 	{% endfor %}
     </div> <!-- end grid -->
   </div> <!-- end container -->

@@ -2,7 +2,7 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Vartopia</title>
+  <title>{{ page.title }}</title>
         <link rel="stylesheet" href="{{site.baseurl}}/css/normalize.css">
         <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
         <link rel="stylesheet" href="{{site.baseurl}}/css/colorbox.css">
@@ -20,79 +20,31 @@
 <div class="darkbg row">
 <div class="container">
 
-        <div class="site-logo">
-          <a href="{{site.baseurl}}">
-          <img alt="logo" src="http://vendortopia.com/wordpress/wp-content/uploads/2013/05/logo2.png">
-          </a></div>
-{% include nav.html navclass='site-nav' %}
+
+       {% include logo.html %}
+       {% include nav.html navclass='site-nav' %}
+
     
 </div> <!-- end container -->
 </div> <!-- end row -->
 </header><!-- end site-header -->
 <div class="row">    <a id="top"><img src="{{site.baseurl}}/img/arrow-hidden.png" width="30" height="27" /></a> </div>
-<div class="first row">
-<div class="container">
+
+
 {{content}}
-</div> <!-- end container -->
-</div> <!-- end row -->
-<div class="divider row">
-<div class="container">
-    <!-- List of clients -->
-    <div id="bottom-container">
-      <div id="arr-prev"> </div> <div id="arr-next"> </div>
-      
-      <div id="logos-go" class="logos">
-        <div><img src="{{site.baseurl}}/img/grayscale-logos1.png"  /></div> 
-        <div><img src="{{site.baseurl}}/img/grayscale-logos2.png"  /> </div>
-        <div><img src="{{site.baseurl}}/img/grayscale-logos3.png"  /> </div>
-        <div><img src="{{site.baseurl}}/img/grayscale-logos4.png"  /> </div>
-        <div><img src="{{site.baseurl}}/img/grayscale-logos5.png"  /> </div>
-        </div><!-- /logos-go --> </div><!-- #bottom-container -->
-</div> <!-- end container -->
-</div> <!-- end row -->
+
+
+{% include logos-go.html %}
+
 </div> <!-- end wrap -->
-<footer class="darkbg row">
-<div class="container">
-<div id="afterfooter">
-<div id="afterfooterwrap">
-    <ul class="follow">
-        <li><b>Follow Us</b></li>
-        <li><a class="tw" href="http://twitter.com/#!/vartopia">Tw</a></li>
-        <li><a class="in" href="http://www.linkedin.com/company/vartopia">In</a></li>
-    </ul><!-- follow -->
-	
-</div> <!-- end afterfooterwrap -->
-</div> <!-- end afterfooter -->
-</div> <!-- end row -->  	
-</footer> <!-- end footer -->        
-	<script src="{{site.baseurl}}/js/vendor/jquery-1.10.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="{{site.baseurl}}/js/plugins.js"></script>
-        <script src="{{site.baseurl}}/js/main.js"></script>
+     
+{% include afterfooter.html %}
 
 {% if page.url contains '/vendors' %} {% include vendors-hidden-and-js.html %} {% endif %}
 {% if page.url contains '/vars' %} {% include vars-hidden-and-js.html %} {% endif %}
 
-        <script src="{{site.baseurl}}/js/cycle.js"></script>
-	<script type='text/javascript'>
-		$(document).ready(function() {
-			$('#logos-go').cycle({
-				fx: 'scrollLeft',
-				speed: 5000,
-				next: '#arr-next',
-				prev: '#arr-prev'
-			});
-		});
-        </script>
-	<script src="{{site.baseurl}}/js/pullup.js"></script>
-        <script>
-		$(document).ready(function(){
-	        $(".scroll").pullupScroll('.container');
-		});
-	</script>
-
-
-
+{% include logos-go-script.html %}
+{% include trackers.html %}
 
 </body>
 </html>

@@ -1,4 +1,5 @@
 markdown: redcarpet
-baseurl: /vartopia
+baseurl: /vartopia.com
 exclude: ['README.md']
 permalink: pretty
+# this is a comment

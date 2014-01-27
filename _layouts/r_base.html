@@ -2,7 +2,7 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Vartopia</title>
+  <title>{{ page.title }}</title>
         <link rel="stylesheet" href="{{site.baseurl}}/css/normalize.css">
         <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
         <link rel="stylesheet" href="{{site.baseurl}}/css/colorbox.css">
@@ -13,11 +13,9 @@
 <div class="darkbg row">
 <div class="container">
 
-       <div class="site-logo">
-         <a href="{{site.baseurl}}">
-         <img alt="logo" src="http://vendortopia.com/wordpress/wp-content/uploads/2013/05/logo2.png">
-       </a></div>
+       {% include logo.html %}
        {% include nav.html navclass='site-nav' %}
+
 </div> <!-- end container -->
 </div> <!-- end row -->
 </header><!-- end site-header -->
@@ -25,47 +23,9 @@
 
 {{content}}
 
-<footer class="darkbg row">
-<div class="container">
-<div id="afterfooter">
-<div id="afterfooterwrap">
-    <ul class="follow">
-        <li><b>Follow Us</b></li>
-        <li><a class="tw" href="http://twitter.com/#!/vartopia">Tw</a></li>
-        <li><a class="in" href="http://www.linkedin.com/company/vartopia">In</a></li>
-    </ul><!-- follow -->
-	
-</div> <!-- end afterfooterwrap -->
-</div> <!-- end afterfooter -->
-</div> <!-- end row -->  	
-</footer> <!-- end footer -->  
-	<script src="{{site.baseurl}}/js/vendor/jquery-1.10.2.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{{site.baseurl}}/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="{{site.baseurl}}/js/plugins.js"></script>
-        <script src="{{site.baseurl}}/js/main.js"></script>
-	<script src="{{site.baseurl}}/js/pullup.js"></script>
-        <script>
-		$(document).ready(function(){
-	        $(".scroll").pullupScroll('.container');
-		});
-	</script>
+{% include afterfooter.html %}
 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19636017-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-
-        <!-- Genius tracking code -->
-<script language='JavaScript' type='text/javascript'>if (self==top){document.write("<scr" + "ipt type='text/javascript' language='JavaScript' id='GeniusCode' src='" + location.protocol + '//cehdi.rsvpgenius.com/mgTrack1.js?mgcid=5c2dmt6' + "'><\/scr" + "ipt>");}</script> 
+{% include trackers.html %}
 
 </body>
 </html>

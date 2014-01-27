@@ -1,238 +1,74 @@
 ---
 layout: moving-boxes
-title: Vartopia for vendors
+title: How We Help Vendors
 ---
-     <h1 class="xl">How We Help Vendors</h1>
 
-     <h2>Deal registration programs are a powerful tool to grow and manage your channel business. Let us show you how Vartopia can increase their  effectiveness for both you and your partners.</h2>
-
-	<p>Our network processes thousands of deal registrations every week for many of our industries leading resellers and manufacturers.</p> 
-	<div class="grid">
-		<div class="bouncy four columns category">
-        <a href="#connector"><img src="{{site.baseurl}}/img/engine.png" /><br>Vartopia Connector<br><span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span>
-</a> </div>        
-         <div class="bouncy four columns category push-7">
-        <a href="#sf"><img src="{{site.baseurl}}/img/plugin.png" /><br>Vartopia Deal Registration for Salesforce<br><span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span>
-</a></div>
-    <!--    <div class="four columns category">
-        <a href="#drs"><img src="{{site.baseurl}}/img/submission.png" /><br>Vartopia Deal Registration System<br><img src="{{site.baseurl}}/img/arrow-down.png" class="arrow-down" />
-</a> </div> -->
-        <div class="bouncy four columns category push-7">
-        <a href="#solution"> <img src="{{site.baseurl}}/img/solution.png" /><br>Vartopia Solution Registration<br><span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span>
-</a> </div>
-       
-	</div> <!-- end grid -->
-</div> <!-- end container -->
-</div> <!-- end row -->
-<a id="connector"><img src="{{site.baseurl}}/img/arrow-hidden.png" width="30" height="27" /></a>
-<div class="divider row">
-<div class="container">
-	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/engine.png" /></span>Vartopia Connector</h1>
-
-    <h2>Connect your exisiting deal registration system to the Vartopia Network and help acclerate your deal registration program participation and effectivness!</h2>
-        <img src="{{site.baseurl}}/img/screens/vendors1-03.png" alt="Vartopia App for managing Deal Registrations in your Salesforce CRM" />
-	<div class="grid">
-    <div class="left two columns"> 
-    <p>Connect your existing registration system to the Vartopia Network and enable your Partners to submit, manage and measure their deal registrations from within the Vartopia Platform.  They choose how to access your deal registration programs, either through our Multi Vendor Portal or directly from their CRM.  </p>
-        <p>Resellers using Vartopia see a significant increase in:</p>
-        <ul>
-            <li>Submitted Deal Registrations</li>
-        
-            <li>Approved Deal Registrations</li>
-        
-            <li>Closed Deal Registrations</li>
-        </ul>
-    </div>
-    <div class="rounded padded dayskybg push-7 three columns" style="margin-top:20px;">
-       <p>"We urge all of our technology partners to connect to the Vartopia Network because doing so ensures we will maximize our participation in their channel incentive programs and close more business."</p>
-      <p>- Dave Elsner, VP of Sales and Marketing - Nexus IS</p>
-      </div>
-    </div> <!-- end grid  --> 
-    <div class="grid">
-      <div class="two columns" >
-      <div class="blue-box">
-      <img src="{{site.baseurl}}/img/pdf.png" width="82" height="79" />
-      <a href="#inline_content" class="inline"><span>Read our Case Studies: 
-      <h4>Learn how we've helped our customers</h4></span></a>
-      </div><!--/blue-box -->
-       </div> 
-    </div>
-    <div class="grid">
-    <div class="two columns">
-    <h3 class="bluebg no-margin rounded padded"> Reseller Experience</h3>
-          <ul id="slider">
-          <li><a href="{{site.baseurl}}/img/vendors/uncropped/connector/1.png" class="connector"><img src="{{site.baseurl}}/img/vendors/connector/1.png" alt="Registration Submission: Choose Vendor and Program" /></a></li>
-          <li><a href="{{site.baseurl}}/img/vendors/uncropped/connector/2.png" class="connector"><img src="{{site.baseurl}}/img/vendors/connector/2.png" alt="View Registrations Filter" /></a></li>
-          <li><a href="{{site.baseurl}}/img/vendors/uncropped/connector/3.png" class="connector"><img src="{{site.baseurl}}/img/vendors/connector/3.png" alt="View Registrations Grid View" /></a></li>
-          <li><a href="{{site.baseurl}}/img/vendors/uncropped/connector/4.png" class="connector"><img src="{{site.baseurl}}/img/vendors/connector/4.png" alt="Registration Reporting Dashboard" /></a></li>
-          <li><a href="{{site.baseurl}}/img/vendors/uncropped/connector/5.png" class="connector"><img src="{{site.baseurl}}/img/vendors/connector/5.png" alt="Registration Reporting Dashboard Detail Grid" /></a></li>
-
-          </ul>
-     </div>
-     </div>
-   <!-- end grid -->      
+<div class="first row">
+  <div class="container">
+    <h1 class="xl"> {{page.title}} </h1>
     
-<!-- <a class="long-green-button" href="vars.html">
-        <h3>&nbsp; Request Information &nbsp;</h3>
-     </a> -->
-     <div class="cl"></div>
-     <a href="#sf" class="bouncy next-section" ><span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" width="20" class="bouncy-arrow" /></span> <span class="next-text"> Vartopia for Salesforce CRM </span> </a>
-    <a href="#top" class="scroll go-up" id="sf"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>      
+    <h2>Deal registration programs are a powerful tool to grow and manage your channel business. Let us show you how Vartopia can increase their  effectiveness for both you and your partners.</h2>
+
+    <p>Our network processes thousands of deal registrations every week for many of our industries leading resellers and manufacturers.</p> 
+
+    <div class="grid">
+	{% for article in site.categories.vendors %}
+         {% if forloop.first or paginator.total_pages >= 4 %}
+	  <div class="bouncy four columns category">
+	    
+	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
+	    <br>{{ article.title }}<br>
+	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
+
+	  </div>
+	 {% else %}
+	  <div class="bouncy four columns category push-7">
+	    
+	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
+	    <br>{{ article.title }}<br>
+	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
+
+	  </div>
+	 {% endif %}
+	{% endfor %}
+    </div> <!-- end grid -->
+  </div> <!-- end container -->
+</div> <!-- end first row -->
+
+{% for article in site.categories.vendors %}
+{% if forloop.first %}
+<a id="{{ article.short }}"><img src="{{site.baseurl}}/img/arrow-hidden.png" width="30" height="27" /></a>
+
+<div class="divider row">
+<div class="container">
+
+	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
+	{{ article.content }}
+
+{% else %}
+
+	<!-- next sec. links -->
+	<a href="#{{ article.short }}" class="bouncy next-section" >
+	  <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" width="20" class="bouncy-arrow" /></span> 
+	  <span class="next-text"> {{ article.title }} </span>
+	</a>
+
+	<a href="#top" class="scroll go-up" id="{{ article.short }}"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>
+
 </div> <!-- end container -->
 </div> <!-- end row -->
 <div class="divider row">
 <div class="container">
-<h1 class="xl"> <span><img src="{{site.baseurl}}/img/plugin.png" /></span>Vartopia for Salesforce CRM</h1>
 
-        <h3>Combine Salesforce and Vartopia to deliver the industries most powerful deal registration solution.<br/>
-Give your channel the tools they need to drive revenue!
-</h3>
-              
-      <div class="vendors-sfdc grid">
-      <div class="twosm columns">
-      <h3 class="greenbg no-margin rounded padded">Partner Registration System</h3>
-      <ul id="slider2">
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/partner/Dashboard.png" class="sfdc1"><img src="{{site.baseurl}}/img/vendors/salesforce/partner/Dashboard.png" alt="Vartopia for Salesforce Partner Dashboard" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/partner/ReportingEngine.png" class="sfdc1"><img src="{{site.baseurl}}/img/vendors/salesforce/partner/ReportingEngine.png" alt="Vartopia for Salesforce Partner Registration Reporting Filter" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/partner/ReportingView.png" class="sfdc1"><img src="{{site.baseurl}}/img/vendors/salesforce/partner/ReportingView.png" alt="Vartopia for Salesforce Partner Registration Reporting Grid View" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/partner/RegEngine1.png" class="sfdc1"><img src="{{site.baseurl}}/img/vendors/salesforce/partner/RegEngine1.png" alt="Vartopia for Salesforce Partner Registration Engine: Choose Vendor and Program" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/partner/RegEngine2.png" class="sfdc1"><img src="{{site.baseurl}}/img/vendors/salesforce/partner/RegEngine2.png" alt="Vartopia for Salesforce Partner Registration Engine: Choose Customer and Sales Rep" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/partner/RegEngine3.png" class="sfdc1"><img src="{{site.baseurl}}/img/vendors/salesforce/partner/RegEngine3.png" alt="Vartopia for Salesforce Partner Registration Engine: Fill Vendor Specific Fields and Submit" /></a></li>
-      </ul>
-      </div> <!-- end column -->
-      <div class="left push-7 twosm columns">
-      <h3 class="center greenbg no-margin rounded padded">Your Salesforce CRM</h3>
-      <ul id="slider">
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/sfdc/1.png" class="sfdc2"><img src="{{site.baseurl}}/img/vendors/salesforce/sfdc/1.png" alt="SFDC Dashboard" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/sfdc/2.png" class="sfdc2"><img src="{{site.baseurl}}/img/vendors/salesforce/sfdc/2.png" alt="SFDC Registration Page" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/sfdc/3.png" class="sfdc2"><img src="{{site.baseurl}}/img/vendors/salesforce/sfdc/3.png" alt="SFDC Registration Tab" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/salesforce/sfdc/4.png" class="sfdc2"><img src="{{site.baseurl}}/img/vendors/salesforce/sfdc/3.png" alt="SFDC VAR Page" /></a></li>      
-      </ul> </div>
+	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
+	{{ article.content }}
 
-      </div> <!-- end grid -->
-       <div class="grid">
-         <div class="left twosm columns">
-           <p>Empower your Partners with a powerful suite of tools that allow  them to effectively operationalize and manage their deal registration process.</p>
-           <p>Partners can choose either a powerful web portal or install one  of our CRM packages.</p>
-           <p>Features Include:</p>
-           <ul>
-             <li>Partner Self Administration
-             <ul>
-               <li>Sales Groups / Territories</li>
-               <li>Users</li>
-             </ul></li>
-             <li>Registration Submission Engine
-             <ul>
-               <li>Support for Centralized Registration Processes</li>
-             </ul></li>
-             <li>Registration Reporting Engine
-             <ul>
-               <li>Group &amp; Filter on  – Sales Rep, Customer, Expiration Date, Status, Program</li>
-               <li>Automated Report Delivery via email</li>
-             </ul></li>
-             <li>Analytics Dashboard
-             <ul>
-               <li>Registration Performance</li>
-               <li>At Risk Registrations</li>
-             </ul></li>
-           </ul>
-         </div>
-<div class="left push-7 twosm columns">
-  <p>Vartopia&#8217;s Saleforce package provides key enhancements to the  traditional approach of treating deal registrations as leads.</p>
-  <p>The Vartopia package creates a deal registration object in  Salesforce. Each deal registration is then linked to the following  record types in Salesforce.</p>
-  <ul>
-    <li>Partner Account</li>
-    <li>Customer Account</li>
-    <li>Customer Opportunity</li>
-  </ul>
-  <p>Features Include:</p>
-  <ul>
-    <li>Automated Partner System Activation</li>
-    <li>Support for Multiple Programs</li>
-    <li>Unique Deal Registration ID Numbers</li>
-    <li>Auto creation of Registration Expiration Date</li>
-    <li>Configurable Registration Statuses</li>
-  </ul>
-  <p>All standard Saleforce functionality can be applied to the deal  registration object including:</p>
-  <ul>
-    <li>Workflow</li>
-    <li>Tasks &amp; Notifications</li>
-    <li>Reporting and Dashboards</li>
-  </ul>
-</div>
-       </div>
-    <a href="#solution" class="bouncy next-section" ><span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" width="20" class="bouncy-arrow" /></span> <span class="next-text"> Vartopia Solution Registration</span> </a>
-	<a href="#top" class="scroll go-up" id="solution"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>
+  {% if forloop.last %}
+	<a href="#top" class="scroll go-up"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>
+
 </div> <!-- end container -->
 </div> <!-- end row -->
-<!--    <a href="#top" class="scroll go-up" id="drs"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>  
-<div class="divider row">
-<div class="container">
-	 <h1 class="xl"> <span><img src="{{site.baseurl}}/img/submission.png" /></span>Vartopia Deal Registration System</h1>
+  {% endif %}
 
-      <h2>Deploy a deal registration program and system quickly <br>
-      without the need to involve your IT organization.</h2>
-       <h2><img src="{{site.baseurl}}/img/screens/vendors-DRS.png" alt="Vartopia App for managing Deal Registrations in your Salesforce CRM">
-      </h2>
-</div> --> <!-- end container -->
-<!--</div>  end row -->
-
-<div class="divider row">
-<div class="container">
-<h1 class="xl"> <span><img src="{{site.baseurl}}/img/solution.png" /></span>Vartopia Solution Registration</h1>
-
-        <h3>You can't manage and measure what you can't see.  Vartopia provides you with the visibility you need to measure the results of your multi vendor solutions in the channel.</h3>
-       <div class="vendors-solution grid">
-      <div class="twosm columns">
-      <h3 class="ltorangebg no-margin rounded padded">Partner Registration Portal</h3>
-      <ul id="slider3">
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/solution/partner/1.png" class="solution1"><img src="{{site.baseurl}}/img/vendors/solution/partner/1.png" alt="Registration Engine" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/solution/partner/2.png" class="solution1"><img src="{{site.baseurl}}/img/vendors/solution/partner/2.png" alt="Reporting Engine" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/solution/partner/3.png" class="solution1"><img src="{{site.baseurl}}/img/vendors/solution/partner/3.png" alt="Reporting View" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/uncropped/solution/partner/4.png" class="solution1"><img src="{{site.baseurl}}/img/vendors/solution/partner/4.png" alt="VAR Solution Dashboard" /></a></li>
-      </ul>
-      </div> <!-- end column -->
-      <div class="left push-7 twosm columns">
-      <h3 class="center ltorangebg no-margin rounded padded">Alliance Reporting Dashboard</h3>
-      <ul id="slider4">
-      <li><a href="{{site.baseurl}}/img/vendors/solution/vendor/1.png" class="solution2"><img src="{{site.baseurl}}/img/vendors/solution/vendor/1.png" alt="Reporting Dashboard" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/solution/vendor/2.png" class="solution2"><img src="{{site.baseurl}}/img/vendors/solution/vendor/2.png" alt="Reporting Dashboard Detail Grid View" /></a></li>
-      <li><a href="{{site.baseurl}}/img/vendors/solution/vendor/3.png" class="solution2"><img src="{{site.baseurl}}/img/vendors/solution/vendor/3.png" alt="Reporting Dashboard Detail Grid View" /></a></li>
-      </ul> </div>
-
-    </div>
-	   <div class="grid">
-         <div class="left twosm columns">
-           <p>Empower your Partners with a powerful suite of tools that allow them to Submit, Manage and Measure their Deal Registrations associated with your Multi-Vendor Solutions. </p>
-           <p>Features Include:</p>
-           <ul>
-             <li>Partner Self Administration
-             <ul>
-               <li>Sales Groups / Territories</li>
-               <li>Users</li>
-             </ul></li>
-             <li>Registration Submission Engine
-             <ul>
-               <li>Support for centralized registration processes</li>
-             </ul></li>
-             <li>Registration Reporting Engine
-             <ul>
-               <li>Group &amp; Filter on  – Sales Rep, Customer, Expiration Date, Status, Program</li>
-               <li>Schedule Automated Report Delivery via email</li>
-             </ul></li>
-             <li>Analytics Dashboard
-             <ul>
-               <li>Solution Registration Performance</li>
-               <li>At Risk Registrations</li>
-             </ul></li>
-           </ul>
-      </div>
-<div class="left push-7 twosm columns">
-  <p>Vartopia&acute;s Solution Registration System,  provides Vendors with the ability to define solutions in the Vartopia platform  for deal registration by authorized channel partners.</p>
-  <p>When Multi-Vendor Solutions are registered through Vartopia, the individual deal registrations are routed to the appropriate Vendor Systems for review.  Updates to  registrations are automatically pushed back the Partner&acute;s System.</p>
-    <p>Participating Vendors have access to the  combined deal registration data associated with these registrations. This allows your alliances organization to measure the results of your multi-vendor solutions  being sold via the channel.</p>
-</div>
-    </div>
-{% include contact-quicklink.html %}
-    <a href="#top" class="scroll go-up"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>
-
+{% endif %}
+{% endfor %}

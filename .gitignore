@@ -3,3 +3,6 @@ _site/
 
 # temp files
 *~
+
+# ignore config file:
+_config.yml

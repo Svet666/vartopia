@@ -112,6 +112,7 @@
 		z-index: 999;
 	}
 	.first {margin-top:5em;}
+	.site-nav {font-size:12px;}
 }
 @media only screen and (max-width: 720px){
 	.site-logo,.site-nav{ float:none}

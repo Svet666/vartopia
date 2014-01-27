@@ -9,13 +9,14 @@
 		  margin:1px 0 0;
 		  list-style:none}
 .site-nav a{display:block;
-			padding:10px;
+			padding:12px;
 			background:#333;
 			color:#FFF;
 			text-decoration:none;
-			text-transform:uppercase}
+			text-transform:uppercase;
+			}
 .site-nav a:hover,.site-nav a:focus,.site-nav .hlite {color:#FFF;	background:#86C552;}
-.inline-block-list{padding:0;margin:0;list-style:none}.inline-block-list li{display:inline-block;padding:0;margin:0 0 0 0.5em;vertical-align:top}.inline-block-list li:first-child{margin-left:0}
+.inline-block-list{padding:0;margin:0;list-style:none}.inline-block-list li{display:inline-block;padding:0;margin:0;vertical-align:top}.inline-block-list li:first-child{margin-left:0}
 .arrow-down, .next-text {display:inline-block; height:29px; overflow:hidden;}
 .go-up {display:inline-block; padding:10px 10px 0 10px; position:absolute; right:0; bottom:0;}
 .next-section {display:inline-block; padding:5px; vertical-align:middle;}

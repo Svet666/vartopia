@@ -13,7 +13,7 @@ title: How We Help Resellers
 
     <div class="grid">
 	{% for article in site.categories.vars %}
-	  <div class="bouncy four columns category">
+	  <div class="bouncy five columns category">
 	    
 	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
 	    <br>{{ article.title }}<br>
@@ -35,6 +35,8 @@ title: How We Help Resellers
 	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
 	{{ article.content }}
 
+	{% include contact-quicklink-sm.html %}
+
 {% else %}
 
 	<!-- next sec. links -->
@@ -52,6 +54,8 @@ title: How We Help Resellers
 
 	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
 	{{ article.content }}
+
+	{% include contact-quicklink-sm.html %}
 
   {% if forloop.last %}
 	<a href="#top" class="scroll go-up"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>

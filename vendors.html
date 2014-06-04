@@ -9,27 +9,20 @@ title: How We Help Vendors
     
     <h2>Deal registration programs are a powerful tool to grow and manage your channel business. Let us show you how Vartopia can increase their  effectiveness for both you and your partners.</h2>
 
-    <p>Our network processes thousands of deal registrations every week for many of our industries leading resellers and manufacturers.</p> 
+    <p>Vartopia processes thousands of deal registrations every week for many of our industries leading resellers and manufacturers</p> 
 
     <div class="grid">
 	{% for article in site.categories.vendors %}
-         {% if forloop.first or paginator.total_pages >= 4 %}
+
 	  <div class="bouncy four columns category">
 	    
 	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
-	    <br>{{ article.title }}<br>
+	    <br><b>{{ article.title }}</b><br>
+	    <span class="sub">{{ article.subtitle }}</span><br>
 	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
 
 	  </div>
-	 {% else %}
-	  <div class="bouncy four columns category push-7">
-	    
-	    <a href="#{{article.short}}"><img src="{{site.baseurl}}/img/{{article.tile}}" />
-	    <br>{{ article.title }}<br>
-	    <span class="arrow-down"><img src="{{site.baseurl}}/img/arrow-down.png" class="bouncy-arrow" /></span></a> 
 
-	  </div>
-	 {% endif %}
 	{% endfor %}
     </div> <!-- end grid -->
   </div> <!-- end container -->
@@ -44,6 +37,8 @@ title: How We Help Vendors
 
 	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
 	{{ article.content }}
+
+	{% include contact-quicklink-sm.html %}
 
 {% else %}
 
@@ -62,6 +57,8 @@ title: How We Help Vendors
 
 	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
 	{{ article.content }}
+	
+	{% include contact-quicklink-sm.html %}
 
   {% if forloop.last %}
 	<a href="#top" class="scroll go-up"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>

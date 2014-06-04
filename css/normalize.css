@@ -126,6 +126,7 @@ a:hover {
 h1 {
     font-size: 2em;
     margin: 0.67em 0;
+    -webkit-text-stroke: .5px;
 }
 
 h2 {
@@ -293,7 +294,7 @@ menu,
 ol,
 ul {
     margin: 1em 0;
-	color:#444;
+	color:#222;
 }
 ul ul {
 	margin:.5em 0;}

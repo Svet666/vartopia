@@ -36,6 +36,8 @@ children: about
 	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
 	{{ article.content }}
 
+	{% include contact-quicklink-sm.html %}
+
 {% else %}
 
 	<!-- next sec. links -->
@@ -53,6 +55,8 @@ children: about
 
 	<h1 class="xl"> <span><img src="{{site.baseurl}}/img/{{article.tile}}" /></span>{{ article.title }}</h1>
 	{{ article.content }}
+
+	{% include contact-quicklink-sm.html %}
 
   {% if forloop.last %}
 	<a href="#top" class="scroll go-up"><img src="{{site.baseurl}}/img/arrow-up.png" width="30" height="27" /></a>

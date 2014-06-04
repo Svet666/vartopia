@@ -54,9 +54,12 @@
 .blue-box h4, .no-margin {margin:0;}
 .blue-box a {color:#222;}
 .hlite a {color:#649EC1;}
+.login a, .login a:hover {background:#5D97C1;}
+.sub {font-size:14px;}
 /* one time used styles */
 .vendors-sfdc {background:url(../img/plugin-lt.png) no-repeat center center; background-size:15%;}
 .vendors-solution {background:url(../img/solution-lt.png) no-repeat center center; background-size:15%;}
+.vendors-supernova {background:url(../img/submission-lt.png) no-repeat center center; background-size:15%;}
 /* ====================== Buttons ============================= */
 .request-info {padding:1em; vertical-align:middle;}
 .request-info span {display:inline-block; height:100px; padding:0; margin-left:25px; float:left;}
@@ -66,14 +69,33 @@
 	width: 100px;
 }
 
-.image1 {
+.flip-box .image1 {
 	position: absolute;
 	cursor: pointer;
 	width: 100px;
 	height: 100px;
 }
 
-.image2 {
+.flip-box .image2 {
+	position: absolute;
+	cursor: pointer;
+}
+/* Small flip icon */
+.sm span {argin-left:1px;}
+.flip-box-sm { width:60px; padding:0; margin-right:35px; float:left;}
+
+.ie7 .contact-us .flip-box-sm {
+	width: 60px;
+}
+
+.flip-box-sm .image1 {
+	position: absolute;
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+}
+
+.flip-box-sm .image2 {
 	position: absolute;
 	cursor: pointer;
 }

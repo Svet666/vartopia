@@ -14,7 +14,10 @@
 .orange, blockquote {color:#FF6633;}
 .orangebg {background:#FF6633; border:2px solid #FF6633;}
 .ltorangebg {background:#F59B30;}
+.blue {color:#5D97C1;}
 .bluebg {background:#5D97C1;}
+.red {color:#DE4458;}
+.redbg {background:#DE4458;}
 
 .bloghead {text-align:left; color:#FFF;}
 .bloghead a:hover, .bloghead a:active {color:#FFF;}

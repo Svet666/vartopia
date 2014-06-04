@@ -9,17 +9,19 @@ title: Vartopia News
 </div> <!-- end container -->
 </div> <!-- end row -->
 
+{% for article in site.data.news %}
+{% if forloop.first %}
 <!-- latest -->
 <div class="row">
 <div class="container right">
 <div class="grid darkbg">
 <div class="oneandahalf columns bloghead">
-   <h3 class="padded"><a href="http://www.channelpartnersonline.com/news/2013/12/vartopia-tackles-deal-reg-challenges-with-platfor.aspx" target="_new">Vartopia Tackles Deal-Reg Challenges With Platform Upgrade</a></h3>
-   <p class="padded">Published on:  December 12th, 2013 </p>
+   <h3 class="padded"><a href="{{ article.url }}" target="_new">{{ article.name }}</a></h3>
+   <p class="padded">Published on:  {{ article.date }} </p>
 </div>
 <div class="three columns">
-<!--   <div class="latest"><h4>Latest</h4></div>  -->
-   <a href="http://www.channelpartnersonline.com/news/2013/12/vartopia-tackles-deal-reg-challenges-with-platfor.aspx" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/ChannelPartners.png" style="margin-top:15px;" /> </a>
+   <div class="latest"><h4>Latest</h4></div>  
+   <a href="{{ article.url }}" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/{{ article.tile }}" style="margin-top:15px;" /> </a>
 </div>
 
 </div> <!-- /grid -->
@@ -33,45 +35,22 @@ title: Vartopia News
 <br />
 <div class="grid left">
 
+{% else %}
+
+<!-- section -->
 <div class="margin-right left three columns">
-   <a href="http://www.channelprosmb.com/article/vartopia_upgrades_its_deal_registration_network" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/channelprosmb.png" /> </a>
-   <h4><a href="http://www.channelprosmb.com/article/vartopia_upgrades_its_deal_registration_network" target="_blank">Vartopia Upgrades Its Deal Registration Network</a></h4>
-   <p>Published on: December 26, 2013</p>
+   <a href="{{ article.url }}" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/{{ article.tile }}" /> </a>
+   <h4><a href="{{ article.url }}" target="_blank">{{ article.name }}</a></h4>
+   <p>Published on: {{ article.date }}</p>
 </div>
+<!-- /section -->
 
-<div class="margin-right left three columns">
-   <a href="http://thevarguy.com/channel-roundup/channel-partner-program-roundup-year-end-edition-part-one" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/varguy.png" /> </a>
-   <h4><a href="http://thevarguy.com/channel-roundup/channel-partner-program-roundup-year-end-edition-part-one" target="_blank">Channel Partner Program Roundup: Year-End Edition, Part One</a></h4>
-   <p>Published on: December 26, 2013</p>
-</div>
-
-<div class="margin-right left three columns">
-   <a href="http://channelvisionmag.com/vartopia-enhance-deal-registration-platform/" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/channel-vision.png" /> </a>
-   <h4><a href="http://channelvisionmag.com/vartopia-enhance-deal-registration-platform/" target="_blank">Vartopia Enhances Deal Registration Platform</a></h4>
-   <p>Published on: December 13, 2013</p>
-</div>
-
-
-<div class="margin-right left three columns">
-   <a href="http://www.crn.com/news/channel-programs/240164714/vartopia-update-helps-resellers-register-vendor-deals-without-the-headache.htm" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/CRN.gif" /> </a>
-   <h4><a href="http://www.crn.com/news/channel-programs/240164714/vartopia-update-helps-resellers-register-vendor-deals-without-the-headache.htm" target="_blank">Vartopia Update Helps Resellers Register Vendor Deals Without The Headache</a></h4>
-   <p>Published on: December 12, 2013</p>
-</div>
-
-
-<div class="margin-right left three columns">
-   <a href="http://searchitchannel.techtarget.com/news/2240211079/Vartopia-aims-to-simplify-deal-registration-process-for-VARs" target="_blank"> <img src="{{site.baseurl}}/img/news-tiles/SearchITChannel.png" /> </a>
-   <h4><a href="http://searchitchannel.techtarget.com/news/2240211079/Vartopia-aims-to-simplify-deal-registration-process-for-VARs" target="_blank">Vartopia aims to simplify deal registration process for VARs</a></h4>
-   <p>Published on: December 12, 2013</p>
-</div>
-
+{% endif %}
+{% endfor %}
 
 </div> <!-- /grid -->
 </div> <!-- end container -->
 </div> <!-- end row -->
-
-
-
 
 
 
